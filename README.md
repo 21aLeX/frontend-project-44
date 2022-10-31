@@ -13,3 +13,7 @@ calc:
 gcd:
 
 [![asciicast](https://asciinema.org/a/533662.svg)](https://asciinema.org/a/533662)
+
+progression:
+
+[![asciicast](https://asciinema.org/a/533743.svg)](https://asciinema.org/a/533743)

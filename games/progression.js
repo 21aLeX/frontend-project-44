@@ -12,28 +12,24 @@ export default function progression() {
   while (countAnswer !== 3) {
     const array = [Math.floor(Math.random() * 100)];
     const sizeArray = Math.floor(Math.floor(Math.random() * (10 - 5 + 1)) + 5);
-    const step = Math.floor(Math.floor(Math.random() * 10));
-    const element = Math.floor(Math.floor(Math.random() * (sizeArray + 1)));
-    let strQuestion = '';
-    console.log(sizeArray);
+    const step = Math.floor(Math.floor(Math.random() * 10) + 1);
+    const element = Math.floor(Math.floor(Math.random() * (sizeArray - 1)) + 1);
+    let strQuestion = `${array} `;
     for (let i = 1; i < sizeArray; i += 1) {
       array.push(array[i - 1] + step);
       if (i === element) {
         correctAnsewr = array[i];
-        strQuestion += `.. `;
+        strQuestion += '.. ';
       } else {
         strQuestion += `${array[i]} `;
       }
     }
-
-    //     const strQuestion = `${number1} ${number2}`;
-    //     correctAnsewr = nodFinding(number1, number2);
-    //     const indexAnswer = index(correctAnsewr, strQuestion);
-    //     if (indexAnswer === 1) {
-    //       countAnswer += 1;
-    //     } else {
-    //       return `${indexAnswer}${name}!`;
-    //     }
+    const indexAnswer = index(correctAnsewr, strQuestion);
+    if (indexAnswer === 1) {
+      countAnswer += 1;
+    } else {
+      return `${indexAnswer}${name}!`;
+    }
   }
   return `Congratulations, ${name}!`;
 }
