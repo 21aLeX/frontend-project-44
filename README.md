@@ -17,3 +17,7 @@ gcd:
 progression:
 
 [![asciicast](https://asciinema.org/a/533743.svg)](https://asciinema.org/a/533743)
+
+prime:
+
+[![asciicast](https://asciinema.org/a/533757.svg)](https://asciinema.org/a/533757)
