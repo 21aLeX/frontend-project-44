@@ -1,5 +1,4 @@
 #!/usr/bin/env node
+import parity from '../games/parity.js';
 
-import parity from '../src/parity.js';
-
-console.log(parity);
+console.log(parity());
