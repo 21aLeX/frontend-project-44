@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import parity from '../games/parity.js';
+import runEvenGame from '../src/games/runEvenGame.js';
+import cli from '../src/cli.js';
 
-console.log(parity());
+runEvenGame(cli);

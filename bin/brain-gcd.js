@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import nod from '../games/nod.js';
+import runGcdGame from '../src/games/runGcdGame.js';
+import cli from '../src/cli.js';
 
-console.log(nod());
+runGcdGame(cli);

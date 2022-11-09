@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import prime from '../games/prime.js';
+import runPrimeGame from '../src/games/runPrimeGame.js';
+import cli from '../src/cli.js';
 
-console.log(prime());
+runPrimeGame(cli);

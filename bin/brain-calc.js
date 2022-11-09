@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import expression from '../games/expression.js';
+import runCalcGame from '../src/games/runCalcGame.js';
+import cli from '../src/cli.js';
 
-console.log(expression());
+runCalcGame(cli);
