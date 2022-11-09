@@ -23,5 +23,5 @@ function funcCorrectAnsewr() {
 export default function runProgressionGame(cli) {
   const name = cli();
   console.log('What number is missing in the progression?');
-  console.log(index(funcCorrectAnsewr, name));
+  index(funcCorrectAnsewr, name);
 }

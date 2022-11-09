@@ -25,5 +25,5 @@ function funcCorrectAnsewr() {
 export default function runCalcGame(cli) {
   const name = cli();
   console.log('What is the result of the expression?');
-  console.log(index(funcCorrectAnsewr, name));
+  index(funcCorrectAnsewr, name);
 }

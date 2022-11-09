@@ -11,5 +11,5 @@ function funcCorrectAnsewr() {
 export default function runEvenGame(cli) {
   const name = cli();
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  console.log(index(funcCorrectAnsewr, name));
+  index(funcCorrectAnsewr, name);
 }

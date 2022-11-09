@@ -16,5 +16,5 @@ function funcCorrectAnsewr() {
 export default function runPrimeGame(cli) {
   const name = cli();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  console.log(index(funcCorrectAnsewr, name));
+  index(funcCorrectAnsewr, name);
 }

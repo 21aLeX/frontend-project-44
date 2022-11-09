@@ -21,5 +21,5 @@ function funcCorrectAnsewr() {
 export default function runGcdGame(cli) {
   const name = cli();
   console.log('Find the greatest common divisor of given numbers.');
-  console.log(index(funcCorrectAnsewr, name));
+  index(funcCorrectAnsewr, name);
 }
