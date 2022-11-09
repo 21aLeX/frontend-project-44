@@ -14,7 +14,7 @@ export default function template(funcCorrectAnsewr, name) {
     } else {
       const str = ' is wrong answer ;(. Correct answer was ';
       console.log(`'${answer}'${str}'${correctAnsewr}'.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
     count += 1;

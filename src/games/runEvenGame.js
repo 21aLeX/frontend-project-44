@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import Math from 'math';
 import index from '../index.js';
 
@@ -9,10 +8,8 @@ function funcCorrectAnsewr() {
   return [correctAnsewr, number];
 }
 
-export default function runEvenGame() {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+export default function runEvenGame(cli) {
+  const name = cli();
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  index(funcCorrectAnsewr, name);
+  console.log(index(funcCorrectAnsewr, name));
 }
