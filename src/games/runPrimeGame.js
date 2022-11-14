@@ -1,7 +1,7 @@
-import Math from 'math';
+import readlineSync from 'readline-sync';
 import index from '../index.js';
 
-function funcCorrectAnsewr() {
+const funcCorrectAnsewr = () => {
   let correctAnsewr = 'yes';
   const number = Math.floor(Math.random() * (100 - 1) + 2);
   for (let i = 2; i < number; i += 1) {
@@ -11,10 +11,12 @@ function funcCorrectAnsewr() {
     }
   }
   return [correctAnsewr, number];
-}
+};
 
-export default function runPrimeGame(cli) {
-  const name = cli();
+export default function runPrimeGame() {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   index(funcCorrectAnsewr, name);
 }

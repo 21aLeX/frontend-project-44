@@ -1,15 +1,17 @@
-import Math from 'math';
+import readlineSync from 'readline-sync';
 import index from '../index.js';
 
-function funcCorrectAnsewr() {
+const funcCorrectAnsewr = () => {
   let correctAnsewr = '';
   const number = Math.floor(Math.random() * 100);
   correctAnsewr = number % 2 === 0 ? 'yes' : 'no';
   return [correctAnsewr, number];
-}
+};
 
-export default function runEvenGame(cli) {
-  const name = cli();
+export default function runEvenGame() {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  console.log(index(funcCorrectAnsewr, name));
+  index(funcCorrectAnsewr, name);
 }

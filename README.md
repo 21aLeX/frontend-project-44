@@ -1,4 +1,17 @@
 ### Hexlet tests and linter status:
+
+
+Системные требования:
+OS: linux or wls
+node: v18.12.0
+
+Для установки всех необходимых проектов запустить:
+
+make setup
+
+
+
+[![Actions Status](https://github.com/21aLeX/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/21aLeX/frontend-project-44/actions)
 Игры разума!
 
 Данный проект содержит в себе 5 мини игр:
@@ -13,18 +26,7 @@
 
 -Простое ли число?
 
-Для установки всех необходимых проектов запустить:
-
-npm install
-
-Для установки пакета из операционной системы используйте команду:
-
-npm link
-
 Запуск каждой игры осуществляется соответствующей коммандой:
-
-
-[![Actions Status](https://github.com/21aLeX/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/21aLeX/frontend-project-44/actions)
 
 brain-even
 

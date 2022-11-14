@@ -1,7 +1,7 @@
-import Math from 'math';
+import readlineSync from 'readline-sync';
 import index from '../index.js';
 
-function funcCorrectAnsewr() {
+const funcCorrectAnsewr = () => {
   let correctAnsewr = '';
   const array = [Math.floor(Math.random() * 100)];
   const sizeArray = Math.floor(Math.floor(Math.random() * (10 - 5 + 1)) + 5);
@@ -18,10 +18,12 @@ function funcCorrectAnsewr() {
     }
   }
   return [correctAnsewr, strQuestion];
-}
+};
 
-export default function runProgressionGame(cli) {
-  const name = cli();
+export default function runProgressionGame() {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('What number is missing in the progression?');
   index(funcCorrectAnsewr, name);
 }
