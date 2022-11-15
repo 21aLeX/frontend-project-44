@@ -7,14 +7,14 @@ const nodFinding = (a, b) => {
   if (a % (b * whole) !== 0) {
     return nodFinding(b, a - b * whole);
   }
-  return b;
+  return `${b}`;
 };
 
 const funcCorrectAnsewr = () => {
   const number1 = random();
   const number2 = random();
   const strQuestion = `${number1} ${number2}`;
-  const correctAnsewr = `${nodFinding(number1, number2)}`;
+  const correctAnsewr = nodFinding(number1, number2);
   return [correctAnsewr, strQuestion];
 };
 
