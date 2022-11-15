@@ -10,9 +10,7 @@ export default function template(generationData, name) {
     if (answer === String(correctAnsewr)) {
       console.log('Correct!');
     } else {
-      console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnsewr}.`
-      );
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnsewr}.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
