@@ -1,28 +1,27 @@
 import readlineSync from 'readline-sync';
-import index from '../index.js';
+import engineGame from '../index.js';
+import random from '../moduleRandom.js';
 
-const calculation = () => {
-  switch (operator) {
+const calculation = (n1, n2, oper) => {
+  switch (oper) {
     case '+':
-      correctAnsewr = number1 + number2;
-      break;
+      return n1 + n2;
     case '-':
-      correctAnsewr = number1 - number2;
-      break;
+      return n1 - n2;
+    case '*':
+      return n1 * n2;
     default:
-      correctAnsewr = number1 * number2;
-      break;
+      return 'Error operation';
   }
 };
 
 const funcCorrectAnsewr = () => {
-  let correctAnsewr = '';
   const arrOperator = ['+', '-', '*'];
-  const number1 = Math.floor(Math.random() * 100);
-  const number2 = Math.floor(Math.random() * 100);
+  const number1 = random();
+  const number2 = random();
   const operator = arrOperator[Math.floor(Math.random() * 3)];
   const strQuestion = `${number1} ${operator} ${number2}`;
-  cal
+  const correctAnsewr = `${calculation(number1, number2, operator)}`;
   return [correctAnsewr, strQuestion];
 };
 
@@ -31,5 +30,9 @@ export default function runCalcGame() {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
-  index(funcCorrectAnsewr, name);
+  try {
+    engineGame(funcCorrectAnsewr, name);
+  } catch (e) {
+    console.log(e);
+  }
 }

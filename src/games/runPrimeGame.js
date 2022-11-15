@@ -1,15 +1,17 @@
 import readlineSync from 'readline-sync';
-import index from '../index.js';
+import engineGame from '../index.js';
 
-const funcCorrectAnsewr = () => {
-  let correctAnsewr = 'yes';
-  const number = Math.floor(Math.random() * (100 - 1) + 2);
+const isDefinitionPrimeNumber = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
-      correctAnsewr = 'no';
-      break;
+      return false;
     }
   }
+  return true;
+};
+const funcCorrectAnsewr = () => {
+  const number = Math.floor(Math.random() * (100 - 1) + 2);
+  const correctAnsewr = isDefinitionPrimeNumber(number) ? 'yes' : 'no';
   return [correctAnsewr, number];
 };
 
@@ -18,5 +20,5 @@ export default function runPrimeGame() {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  index(funcCorrectAnsewr, name);
+  engineGame(funcCorrectAnsewr, name);
 }

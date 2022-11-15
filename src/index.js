@@ -4,6 +4,9 @@ export default function template(generationData, name) {
   for (let i = 0; i < 3; i += 1) {
     const answers = generationData();
     const [correctAnsewr, strQuestion] = answers;
+    if (correctAnsewr === 'Error operation') {
+      throw 'Error operation';
+    }
 
     console.log(`Question: ${strQuestion}`);
     const answer = readlineSync.question('Your answer: ');
