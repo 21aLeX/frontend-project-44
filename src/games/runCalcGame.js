@@ -1,8 +1,7 @@
-import readlineSync from 'readline-sync';
-import engineGame from '../index.js';
-import random from '../moduleRandom.js';
+import runEngineGame from '../index.js';
+import generateRandom from '../moduleRandom.js';
 
-const calculation = (n1, n2, oper) => {
+const calculate = (n1, n2, oper) => {
   switch (oper) {
     case '+':
       return n1 + n2;
@@ -11,28 +10,22 @@ const calculation = (n1, n2, oper) => {
     case '*':
       return n1 * n2;
     default:
-      return 'Error operation';
+      throw Error;
   }
 };
 
-const funcCorrectAnsewr = () => {
+const generateData = () => {
   const arrOperator = ['+', '-', '*'];
-  const number1 = random();
-  const number2 = random();
-  const operator = arrOperator[Math.floor(Math.random() * 3)];
+  const number1 = generateRandom();
+  const number2 = generateRandom();
+  const operator = arrOperator[generateRandom(3, 0)];
   const strQuestion = `${number1} ${operator} ${number2}`;
-  const correctAnsewr = `${calculation(number1, number2, operator)}`;
-  return [correctAnsewr, strQuestion];
+  const correctAnswer = `${calculate(number1, number2, operator)}`;
+  return [correctAnswer, strQuestion];
 };
 
-export default function runCalcGame() {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('What is the result of the expression?');
-  try {
-    engineGame(funcCorrectAnsewr, name);
-  } catch (e) {
-    console.log(e);
-  }
-}
+const runCalcGame = () => {
+  const question = 'What is the result of the expression?';
+  runEngineGame(generateData, question);
+};
+export default runCalcGame;
