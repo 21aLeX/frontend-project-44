@@ -2,7 +2,9 @@
 [![Actions Status](https://github.com/21aLeX/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/21aLeX/frontend-project-44/actions)
 
 **Системные требования:**
+
 OS: linux or wls
+
 node: v18.12.0
 
 Для установки всех необходимых проектов запустить:
