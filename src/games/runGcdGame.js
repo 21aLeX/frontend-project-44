@@ -1,6 +1,8 @@
 import runEngineGame from '../index.js';
 import generateRandom from '../moduleRandom.js';
 
+const question = 'Find the greatest common divisor of given numbers.';
+
 const defineNod = (a, b) => {
   const whole = Math.trunc(a / b);
   if (a % (b * whole) !== 0) {
@@ -18,7 +20,6 @@ const generateData = () => {
 };
 
 const runGcdGame = () => {
-  const question = 'Find the greatest common divisor of given numbers.';
   runEngineGame(generateData, question);
 };
 export default runGcdGame;

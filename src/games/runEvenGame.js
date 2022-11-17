@@ -1,6 +1,8 @@
 import runEngineGame from '../index.js';
 import generateRandom from '../moduleRandom.js';
 
+const question = 'Answer "yes" if the number is even, otherwise answer "no"';
+
 const isdefineEven = (number) => number % 2 === 0;
 const generateData = () => {
   const number = generateRandom();
@@ -9,7 +11,6 @@ const generateData = () => {
 };
 
 const runEvenGame = () => {
-  const question = 'Answer "yes" if the number is even, otherwise answer "no"';
   runEngineGame(generateData, question);
 };
 export default runEvenGame;
