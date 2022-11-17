@@ -20,7 +20,6 @@ const generateData = () => {
   const array = generateProgression(sizeArray, step);
   const element = generateRandom(0, sizeArray - 1);
   const correctAnswer = array[element];
-  console.log(sizeArray, element);
   array[element] = '..';
   const strQuestion = array.join(' ');
   return [correctAnswer, strQuestion];
