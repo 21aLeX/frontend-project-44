@@ -12,8 +12,8 @@ const defineNod = (a, b) => {
 };
 
 const generateData = () => {
-  const number1 = generateRandom();
-  const number2 = generateRandom();
+  const number1 = generateRandom(1, 100);
+  const number2 = generateRandom(1, 100);
   const strQuestion = `${number1} ${number2}`;
   const correctAnswer = defineNod(number1, number2);
   return [correctAnswer, strQuestion];
