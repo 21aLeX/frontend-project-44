@@ -18,7 +18,7 @@ const generateData = () => {
   const sizeArray = generateRandom(minCount, maxCount);
   const step = generateRandom(1, maxCount);
   const array = generateProgression(sizeArray, step);
-  const element = generateRandom(0, sizeArray) - 1;
+  const element = generateRandom(0, sizeArray - 1);
   const correctAnswer = array[element];
   console.log(sizeArray, element);
   array[element] = '..';
